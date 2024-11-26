@@ -1,0 +1,745 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>CABLEADO AULA</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1422794d-c8e8-80a7-ac29-c9be2bbd5910" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="https://www.notion.so/icons/network_green.svg"/></div><h1 class="page-title">CABLEADO AULA</h1><p class="page-description"></p></header><div class="page-body"><p id="1422794d-c8e8-80ec-97a7-e3e4c28526e2" class="">
+</p><blockquote id="1432794d-c8e8-80dc-9de0-e691e458d523" class="">Héctor Moreno Gallego</blockquote><p id="1432794d-c8e8-806e-88d9-d0db1fbf65b7" class="">
+</p><p id="1432794d-c8e8-80ce-ba4c-d63d6834e3be" class="">
+</p><hr id="1432794d-c8e8-80f6-8300-e7d4edf79c6b"/><p id="1432794d-c8e8-8098-bd03-fb87f8a27975" class="">
+</p><h1 id="1432794d-c8e8-809c-b4c7-d66dbc7afb1d" class="">ÍNDICE</h1><nav id="1432794d-c8e8-802d-b955-d1e0c5fc361a" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1432794d-c8e8-809c-b4c7-d66dbc7afb1d">ÍNDICE</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1432794d-c8e8-8083-8d42-c439995fd363">INFORMACIÓN ACERCA DEL AULA</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1422794d-c8e8-8004-9aea-e6703cc044d2"><span style="border-bottom:0.05em solid">MEDIDAS AULA</span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1422794d-c8e8-80c7-9b16-c30c98838694"><span style="border-bottom:0.05em solid">EQUIPOS</span></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1432794d-c8e8-8037-95b0-c6b62fb846eb">PRODUCTOS NECESARIOS</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1422794d-c8e8-805d-8d9b-f39b96c566f5"><span style="border-bottom:0.05em solid">CABLE</span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1422794d-c8e8-804a-831a-c25721c7a005"><span style="border-bottom:0.05em solid">SWITCH</span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1422794d-c8e8-80a4-8749-d267f59ec659"><span style="border-bottom:0.05em solid">PATCH PANEL</span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1422794d-c8e8-8078-99c1-d672214b1f63"><span style="border-bottom:0.05em solid">ROSETA</span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1432794d-c8e8-807f-85d2-c09734f1125c"><span style="border-bottom:0.05em solid">CANALETA</span></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1432794d-c8e8-805d-8fe9-d1925d6dc321">TABLA CON TODOS LOS PRODUCTOS A COMPRAR</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1432794d-c8e8-807c-9193-f0ce8cedd4d1">DISPOSICIÓN EN EL AULA</a></div></nav><p id="1432794d-c8e8-80d1-aeb0-f940c2c960ad" class="">
+</p><hr id="1432794d-c8e8-8053-b37e-c15bcb5759dd"/><p id="1432794d-c8e8-80e7-9c6c-c67ecf7c44ed" class="">
+</p><h1 id="1432794d-c8e8-8083-8d42-c439995fd363" class="">INFORMACIÓN ACERCA DEL AULA</h1><p id="1422794d-c8e8-8075-a8d8-f8e67831001e" class="">
+</p><h3 id="1422794d-c8e8-8004-9aea-e6703cc044d2" class=""><span style="border-bottom:0.05em solid">MEDIDAS AULA</span></h3><p id="1422794d-c8e8-80cd-bbc2-c22edfe5e0a3" class="">Largo → 9m</p><p id="1422794d-c8e8-80d8-8b41-cedc1f1297c7" class="">Ancho → 6m</p><p id="1422794d-c8e8-8088-9a92-c44e307fbcfd" class="">Alto → 3.6m</p><p id="1432794d-c8e8-807c-aaa7-e8ac4b2bb099" class="">
+</p><p id="1432794d-c8e8-8065-9668-e7a6a8f25125" class="">
+</p><h3 id="1422794d-c8e8-80c7-9b16-c30c98838694" class=""><span style="border-bottom:0.05em solid">EQUIPOS</span></h3><ul id="1422794d-c8e8-8056-aaf6-c1594ad81ed6" class="bulleted-list"><li style="list-style-type:disc">17 ordenadores (con el del profesor)</li></ul><ul id="1422794d-c8e8-8065-a10e-f4e6e815c653" class="bulleted-list"><li style="list-style-type:disc">El profesor tendrá dos puntos de acceso a la red.</li></ul><p id="1432794d-c8e8-80f2-8c90-e4e8b585302a" class="">
+</p><p id="1432794d-c8e8-805c-9df2-c9565a996199" class="">
+</p><p id="1432794d-c8e8-8027-9c8a-d7b45aa21f28" class="">
+</p><h1 id="1432794d-c8e8-8037-95b0-c6b62fb846eb" class="">PRODUCTOS NECESARIOS</h1><p id="1432794d-c8e8-8013-a454-e6434fd4d699" class="">
+</p><h3 id="1422794d-c8e8-805d-8d9b-f39b96c566f5" class=""><span style="border-bottom:0.05em solid">CABLE</span></h3><p id="1422794d-c8e8-80d1-a9bf-d5e3f5e8ec0b" class="">
+</p><p id="1422794d-c8e8-808b-8b44-d00a47c812c2" class="">La red al ser de 1Gb/s, el cable necesitará ser de categoría 6.</p><p id="1422794d-c8e8-80b8-bfed-f5369f4bf6ea" class="">En cuanto a cantidad de cables → 15m de esquina a esquina, de largo la clase mide 9 metros y de ancho 6 metros, se necesitarán por lo menos 18 cables de red, por lo tanto la cantidad de cable oscilará entre los 180 y 200 metros.</p><p id="1432794d-c8e8-80a5-ade4-cb10b7426f76" class="">
+</p><figure id="1432794d-c8e8-8091-914b-ee260ce79745"><a href="https://www.pccomponentes.com/gembird-cable-de-red-rj-45-cat-6-ftp-30m-gris?utm_source=624709&amp;utm_medium=afi&amp;utm_campaign=www.twenga-solutions.com&amp;sv1=affiliate&amp;sv_campaign_id=624709&amp;awc=20981_1731917727_52fc1415153392cabd0c33ef0d5b884d&amp;utm_term=deeplink&amp;utm_content=31f08c0455cc7fe1428f3052e235b2bc" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Gembird Cable de Red RJ-45 Cat 6 FTP 30m Gris</div><div class="bookmark-description">Cable de red FTP Cat 6 con conectores RJ-45 y una longitud de 30m.
+Especificaciones:
+
+General
+
+Color del producto: Gris
+Longitud de cable: 30 m
+Cable estándar: Cat6
+Blindaje de cable: F/UTP (FTP)
+Conector 1: RJ-45
+Conector 2: RJ-45
+Género del conector 1: Macho
+Género del conector 2: Macho
+Tipo de conductor: Trenzado
+AWG calibre del cable: 24
+
+</div></div><div class="bookmark-href"><img src="https://cdn.pccomponentes.com/img/favicons/apple-touch-icon.png" class="icon bookmark-icon"/>https://www.pccomponentes.com/gembird-cable-de-red-rj-45-cat-6-ftp-30m-gris?utm_source=624709&amp;utm_medium=afi&amp;utm_campaign=www.twenga-solutions.com&amp;sv1=affiliate&amp;sv_campaign_id=624709&amp;awc=20981_1731917727_52fc1415153392cabd0c33ef0d5b884d&amp;utm_term=deeplink&amp;utm_content=31f08c0455cc7fe1428f3052e235b2bc</div></div><img src="https://img.pccomponentes.com/articles/1057/10578491/1213-gembird-cable-de-red-rj-45-cat-6-ftp-30m-gris.jpg" class="bookmark-image"/></a></figure><p id="1432794d-c8e8-8025-9bd0-c69b74f984e5" class="">
+</p><p id="1432794d-c8e8-806f-a9f5-e72fecc13525" class="">
+</p><p id="1422794d-c8e8-8057-af4e-e56fc42780a5" class="">
+</p><h3 id="1422794d-c8e8-804a-831a-c25721c7a005" class=""><span style="border-bottom:0.05em solid">SWITCH</span></h3><p id="1432794d-c8e8-808e-a6b0-f367420d783a" class="">
+</p><p id="1422794d-c8e8-805c-a945-f304ed06fbd5" class="">Especificaciones: </p><ul id="1432794d-c8e8-805a-928c-dafd8df6309c" class="bulleted-list"><li style="list-style-type:disc">(24) puertos GbE</li></ul><ul id="1432794d-c8e8-80c5-ab62-f72c2dc8c863" class="bulleted-list"><li style="list-style-type:disc">(2) puertos SFP de 1G</li></ul><ul id="1432794d-c8e8-8080-8087-e5c67dd54117" class="bulleted-list"><li style="list-style-type:disc">Refrigeración silenciosa sin ventilador</li></ul><p id="1432794d-c8e8-8087-9f0c-cd889803b0c7" class="">
+</p><figure id="1432794d-c8e8-806a-95ac-e411623d24ac"><a href="https://www.senetic.es/product/USW-24?listingSource=ubiquiti-networks" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Ubiquiti Networks UniFi USW-24 switch Gestionado L2 Gigabit Ethernet (10/100/1000) Plata</div><div class="bookmark-description">Ubiquiti Networks UniFi USW-24 es un switch de red avanzado que ofrece una gestión completa y un rendimiento excelente. Con 24 puertos Gigabit Ethernet RJ45 y 2 puertos SFP de 1G, este conmutador no solo proporciona conexiones de alta velocidad a dispositivos Ethernet, sino también la posibilidad de utilizar fibra óptica en una red empresarial. Además, este conmutador ofrece una amplia gama de protocolos de capa 2, incluidos distintos modos de puerto (conmutación, duplicación o agregación). También cuenta con una pantalla táctil en color LCM de 1,3 pulgadas que muestra información clave sobre el sistema y las conexiones.</div></div><div class="bookmark-href"><img src="https://www.senetic.es/favicon.ico" class="icon bookmark-icon"/>https://www.senetic.es/product/USW-24?listingSource=ubiquiti-networks</div></div></a></figure><p id="1432794d-c8e8-80c1-ace9-e9ca5282a353" class="">
+</p><p id="1432794d-c8e8-805d-9c5e-e990c9ff95ac" class="">
+</p><p id="1422794d-c8e8-8003-b64d-e09732eb0067" class="">
+</p><h3 id="1422794d-c8e8-80a4-8749-d267f59ec659" class=""><span style="border-bottom:0.05em solid">PATCH PANEL</span></h3><p id="1432794d-c8e8-8035-8467-f2afb2a0ba92" class="">
+</p><p id="1432794d-c8e8-8068-ad2c-d45754ed5574" class="">Especificaciones:</p><ul id="1432794d-c8e8-8066-9b7d-d2acd48227a1" class="bulleted-list"><li style="list-style-type:disc">Patch panel de 0.5U y de formato 19&quot; para ser instalado en un armario rack.</li></ul><ul id="1432794d-c8e8-8004-948a-d1ca5982f80c" class="bulleted-list"><li style="list-style-type:disc">Dispone de 24 conectores RJ45 hembra.</li></ul><ul id="1432794d-c8e8-8064-b853-e94a46d19984" class="bulleted-list"><li style="list-style-type:disc">Compatible con FTP Cat.6.</li></ul><ul id="1432794d-c8e8-80da-af13-c24dcc72a2b8" class="bulleted-list"><li style="list-style-type:disc">Etiquetado con códigos de color para esquemas de cableado T568A y T568B.</li></ul><ul id="1432794d-c8e8-8049-ac1e-e98b0c795888" class="bulleted-list"><li style="list-style-type:disc">Modelo de color negro (RAL9004).</li></ul><p id="1432794d-c8e8-80e9-9006-f68500b14a6c" class="">
+</p><figure id="1432794d-c8e8-8065-9ef0-f174bfbcfa34"><a href="https://cablematic.com/es/productos/patch-panel-19-de-24-rj45-cat6-ftp-05u-lanberg-pps6-0024-b-RD113/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Patch panel 19&quot; de 24 RJ45 Cat.6 FTP 0.5U Lanberg PPS6-0024-B</div><div class="bookmark-description">Comprar Patch panel 19&quot; de 24 RJ45 Cat.6 FTP 0.5U Lanberg PPS6-0024-B online. Consigue todos los tipos de Patch panel rack 19 en cablematic.com</div></div><div class="bookmark-href"><img src="https://statics.cablematic.com/static/img/favicons/cablematic_favicon-32x32.png" class="icon bookmark-icon"/>https://cablematic.com/es/productos/patch-panel-19-de-24-rj45-cat6-ftp-05u-lanberg-pps6-0024-b-RD113/</div></div><img src="https://storage.googleapis.com/cablematic-1000/images_1000/rd11300-01.jpg" class="bookmark-image"/></a></figure><p id="1432794d-c8e8-806b-a071-f8fc2f432ed7" class="">
+</p><p id="1432794d-c8e8-806f-8aaa-f3db4172a724" class="">
+</p><p id="1422794d-c8e8-8076-9cc5-c6025b74fda6" class="">
+</p><h3 id="1422794d-c8e8-8078-99c1-d672214b1f63" class=""><span style="border-bottom:0.05em solid">ROSETA</span></h3><p id="1432794d-c8e8-800c-ba6d-c2713ff27998" class="">
+</p><p id="1432794d-c8e8-8084-9dd8-ffab6689f93c" class="">Especificaciones:</p><ul id="1432794d-c8e8-8088-8cfb-f4a2d017cfcb" class="bulleted-list"><li style="list-style-type:disc">La roseta de superficie con 2 x RJ45 de categoría 6 FTP es un componente de red estándar que permite la conexión entre dispositivos de red a través de un cable FTP de 8 hilos, divididos en 4 pares, permitiendo la transmisión de datos de alta velocidad hasta 10 Gbps.</li></ul><ul id="1432794d-c8e8-804a-a4ee-e0a5707edc2c" class="bulleted-list"><li style="list-style-type:disc">Cuenta con protección FTP (Foiled Twisted Pair) que disminuye la interferencia electromagnética y aumenta la eficiencia de la señal.</li></ul><ul id="1432794d-c8e8-80d5-83a8-e324aa52fc69" class="bulleted-list"><li style="list-style-type:disc">La categoría 6 es un estándar de especificación de cables de red que garantiza un rendimiento óptimo y una transmisión confiable de datos a velocidades más altas que la categoría 5E.</li></ul><ul id="1432794d-c8e8-8035-bff1-f7a4844044a8" class="bulleted-list"><li style="list-style-type:disc">Se presenta en un tamaño compacto y cuadrado de color blanco dónde en uno de los extremos se encuentra un conector para cable de red RJ45 que se conectará de manera directa garantizando una conexión segura i sin interferencias.</li></ul><ul id="1432794d-c8e8-8050-8308-cd37eb7e7718" class="bulleted-list"><li style="list-style-type:disc">Tiene también un revestimiento plástico para reservar los contactos y asegurar una conexión sólida y fiable.</li></ul><p id="1432794d-c8e8-8006-9ce9-c0c8fec476f1" class="">
+</p><figure id="1432794d-c8e8-807c-978d-c446f0392f6b"><a href="https://cablematic.com/es/productos/roseta-de-superficie-lanberg-con-2-x-rj45-cat-6-ftp-blindado-RI145/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Roseta de superficie Lanberg con 2 x RJ45 Cat. 6 FTP blindado</div></div><div class="bookmark-href"><img src="https://statics.cablematic.com/static/img/favicons/cablematic_favicon-32x32.png" class="icon bookmark-icon"/>https://cablematic.com/es/productos/roseta-de-superficie-lanberg-con-2-x-rj45-cat-6-ftp-blindado-RI145/</div></div><img src="https://storage.googleapis.com/cablematic-1000/images_1000/ri14500-01.jpg" class="bookmark-image"/></a></figure><p id="1432794d-c8e8-8037-a343-f52c539567f9" class="">
+</p><p id="1432794d-c8e8-8092-8b9a-c41093176a0e" class="">
+</p><p id="1432794d-c8e8-80a1-ba04-cc63fa1094f4" class="">
+</p><h3 id="1432794d-c8e8-807f-85d2-c09734f1125c" class=""><span style="border-bottom:0.05em solid">CANALETA</span></h3><p id="1432794d-c8e8-804e-ab87-dcbf7e2254b8" class="">
+</p><p id="1432794d-c8e8-80de-b507-d644a276f896" class="">Para cubrir las necesidades del aula, se necesitarán por lo menos 15 metros de canaletas. </p><p id="1432794d-c8e8-800b-9fde-d4c5bf9162b3" class="">
+</p><p id="1432794d-c8e8-80da-8832-f7f20396392d" class="">Especificaciones:</p><ul id="1432794d-c8e8-8050-b72a-cd829073a3ea" class="bulleted-list"><li style="list-style-type:disc">Altura (cm): 1</li></ul><ul id="1432794d-c8e8-801a-81e0-ce469b56bc51" class="bulleted-list"><li style="list-style-type:disc">Longitud (cm): 200</li></ul><ul id="1432794d-c8e8-80ad-a66a-ff9ed9d95f0f" class="bulleted-list"><li style="list-style-type:disc">Profundidad (cm) 1.2</li></ul><ul id="1432794d-c8e8-80f5-bf12-e937e14a7229" class="bulleted-list"><li style="list-style-type:disc">Cantidad de compartimentos: 1</li></ul><ul id="1432794d-c8e8-8018-b0a1-f6dda675dc0f" class="bulleted-list"><li style="list-style-type:disc">Tipo de fijación: Autoadhesivo</li></ul><p id="1432794d-c8e8-808e-88d5-d9c0d34ba13c" class="">
+</p><figure id="1432794d-c8e8-806c-944c-ce84da86ace4"><a href="https://www.leroymerlin.es/productos/electricidad-y-domotica/canalizar-y-ordenar-los-cables/canaletas/canaleta-10x10-adh-2m-bl-12352312.html" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Canaleta 10X10 ADH 2M BL | Leroy Merlin</div><div class="bookmark-description">Canaleta adhesiva fabricada en PVC de color blanco con tapa ideal para proteger cables en zonas en las que estén a la vista y evitar así accidentes o averías. Medidas: 10 x 12mm   2 metros (alto x ancho x fondo).</div></div><div class="bookmark-href"><img src="https://www.leroymerlin.es/cdp-site/6.36.0/static/images/common/favicon.ico" class="icon bookmark-icon"/>https://www.leroymerlin.es/productos/electricidad-y-domotica/canalizar-y-ordenar-los-cables/canaletas/canaleta-10x10-adh-2m-bl-12352312.html</div></div><img src="https://media.adeo.com/media/1867637/media.jpg" class="bookmark-image"/></a></figure><p id="1432794d-c8e8-8071-bac0-e8f0fb096efe" class="">
+</p><p id="1432794d-c8e8-8070-92b3-f015d72efce5" class="">
+</p><hr id="1432794d-c8e8-8040-bbb7-d0e57483703e"/><h1 id="1432794d-c8e8-805d-8fe9-d1925d6dc321" class="">TABLA CON TODOS LOS PRODUCTOS A COMPRAR</h1><p id="1422794d-c8e8-8024-af22-d6df31edb6ab" class="">
+</p><div id="a126b804-0637-4ffb-aa3e-9dfc40a55241" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>ARTÍCULO</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesUrl"><path d="M7.69922 10.8945L8.73828 9.84863C7.91797 9.77344 7.34375 9.51367 6.91992 9.08984C5.76465 7.93457 5.76465 6.29395 6.91309 5.14551L9.18262 2.87598C10.3379 1.7207 11.9717 1.7207 13.127 2.87598C14.2891 4.04492 14.2822 5.67188 13.1338 6.82031L11.958 7.99609C12.1768 8.49512 12.2451 9.10352 12.1289 9.62988L14.0908 7.6748C15.7725 6 15.7793 3.62109 14.084 1.92578C12.3887 0.223633 10.0098 0.237305 8.33496 1.91211L5.95605 4.29785C4.28125 5.97266 4.26758 8.35156 5.96289 10.0469C6.36621 10.4434 6.90625 10.7441 7.69922 10.8945ZM8.30078 5.13184L7.26855 6.17773C8.08203 6.25293 8.66309 6.51953 9.08008 6.93652C10.2422 8.09863 10.2422 9.73242 9.08691 10.8809L6.81738 13.1504C5.66211 14.3057 4.03516 14.3057 2.87305 13.1504C1.71094 11.9883 1.71777 10.3545 2.87305 9.20605L4.04199 8.03027C3.83008 7.53125 3.75488 6.92969 3.87109 6.39648L1.91602 8.35156C0.234375 10.0264 0.227539 12.4121 1.92285 14.1074C3.61816 15.8027 5.99707 15.7891 7.67188 14.1143L10.0439 11.7354C11.7256 10.0537 11.7324 7.6748 10.0371 5.98633C9.64062 5.58301 9.10059 5.28223 8.30078 5.13184Z"></path></svg></span>URL</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>UNIDADES</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>PRECIO UNITARIO </th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFormula"><path d="M5.04688 14.3604H11.2744C11.7324 14.3604 12.0537 14.0801 12.0537 13.6494C12.0537 13.2119 11.7324 12.9248 11.2744 12.9248H5.81934V12.8564L9.30566 8.82324C9.54492 8.57031 9.6748 8.29688 9.6748 8.0166C9.6748 7.73633 9.54492 7.45605 9.29883 7.20996L5.81934 3.2793V3.21094H11.2812C11.7393 3.21094 12.0537 2.92383 12.0537 2.48633C12.0537 2.05566 11.7393 1.77539 11.2812 1.77539H5.05371C4.34277 1.77539 3.95312 2.26758 3.95312 2.81445C3.95312 3.12207 4.07617 3.44336 4.33594 3.69629L8.15039 7.96875V8.05078L4.3291 12.4395C4.06934 12.6924 3.94629 13.0137 3.94629 13.3213C3.94629 13.8682 4.33594 14.3604 5.04688 14.3604Z"></path></svg></span>TOTAL</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFormula"><path d="M5.04688 14.3604H11.2744C11.7324 14.3604 12.0537 14.0801 12.0537 13.6494C12.0537 13.2119 11.7324 12.9248 11.2744 12.9248H5.81934V12.8564L9.30566 8.82324C9.54492 8.57031 9.6748 8.29688 9.6748 8.0166C9.6748 7.73633 9.54492 7.45605 9.29883 7.20996L5.81934 3.2793V3.21094H11.2812C11.7393 3.21094 12.0537 2.92383 12.0537 2.48633C12.0537 2.05566 11.7393 1.77539 11.2812 1.77539H5.05371C4.34277 1.77539 3.95312 2.26758 3.95312 2.81445C3.95312 3.12207 4.07617 3.44336 4.33594 3.69629L8.15039 7.96875V8.05078L4.3291 12.4395C4.06934 12.6924 3.94629 13.0137 3.94629 13.3213C3.94629 13.8682 4.33594 14.3604 5.04688 14.3604Z"></path></svg></span>TOTAL + IVA</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>IMÁGEN</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>*</th></tr></thead><tbody><tr id="6010ffb7-24fd-476f-8df9-eba9a520f4bb"><td class="cell-title"><a href="https://www.notion.so/CABLE-RED-RJ45-CAT-6-FTP-6010ffb724fd476f8df9eba9a520f4bb?pvs=21">CABLE RED RJ45 CAT 6 FTP</a></td><td class="cell-|\Qh"><a href="https://www.pccomponentes.com/gembird-cable-de-red-rj-45-cat-6-ftp-30m-gris?utm_source=624709&amp;utm_medium=afi&amp;utm_campaign=www.twenga-solutions.com&amp;sv1=affiliate&amp;sv_campaign_id=624709&amp;awc=20981_1731917727_52fc1415153392cabd0c33ef0d5b884d&amp;utm_term=deeplink&amp;utm_content=31f08c0455cc7fe1428f3052e235b2bc" class="url-value">https://www.pccomponentes.com/gembird-cable-de-red-rj-45-cat-6-ftp-30m-gris?utm_source=624709&amp;utm_medium=afi&amp;utm_campaign=www.twenga-solutions.com&amp;sv1=affiliate&amp;sv_campaign_id=624709&amp;awc=20981_1731917727_52fc1415153392cabd0c33ef0d5b884d&amp;utm_term=deeplink&amp;utm_content=31f08c0455cc7fe1428f3052e235b2bc</a></td><td class="cell-SOXI">18</td><td class="cell-G&lt;`O">30,55 €</td><td class="cell-r;LK">549,9</td><td class="cell-zB&lt;K">665,379</td><td class="cell-oBN{"><span style="margin-right:6px"><a href="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/Sin%20ti%CC%81tulo%20a126b80406374ffbaa3e9dfc40a55241/CABLE%20RED%20RJ45%20CAT%206%20FTP%206010ffb724fd476f8df9eba9a520f4bb/1213-gembird-cable-de-red-rj-45-cat-6-ftp-30m-gris.webp"><img style="width:20px;max-height:24px" src="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/Sin%20ti%CC%81tulo%20a126b80406374ffbaa3e9dfc40a55241/CABLE%20RED%20RJ45%20CAT%206%20FTP%206010ffb724fd476f8df9eba9a520f4bb/1213-gembird-cable-de-red-rj-45-cat-6-ftp-30m-gris.webp" alt="1213-gembird-cable-de-red-rj-45-cat-6-ftp-30m-gris.webp"/></a></span></td><td class="cell-kDB&gt;">(Al clickar en la imágen esta verá más grande)</td></tr><tr id="4acbb59c-c48c-4677-bcfc-242db2cdb454"><td class="cell-title"><a href="https://www.notion.so/SWITCH-4acbb59cc48c4677bcfc242db2cdb454?pvs=21">SWITCH</a></td><td class="cell-|\Qh"><a href="https://www.senetic.es/product/USW-24?listingSource=ubiquiti-networks" class="url-value">https://www.senetic.es/product/USW-24?listingSource=ubiquiti-networks</a></td><td class="cell-SOXI">1</td><td class="cell-G&lt;`O">213,44 €</td><td class="cell-r;LK">213,44</td><td class="cell-zB&lt;K">258,2624</td><td class="cell-oBN{"><span style="margin-right:6px"><a href="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/Sin%20ti%CC%81tulo%20a126b80406374ffbaa3e9dfc40a55241/SWITCH%204acbb59cc48c4677bcfc242db2cdb454/c424321167c13787525e0572a6db33c1a7716231_1033519_USW_24_custom_image7.webp"><img style="width:20px;max-height:24px" src="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/Sin%20ti%CC%81tulo%20a126b80406374ffbaa3e9dfc40a55241/SWITCH%204acbb59cc48c4677bcfc242db2cdb454/c424321167c13787525e0572a6db33c1a7716231_1033519_USW_24_custom_image7.webp" alt="c424321167c13787525e0572a6db33c1a7716231_1033519_USW_24_custom_image7.webp"/></a></span></td><td class="cell-kDB&gt;"></td></tr><tr id="1422794d-c8e8-8067-ae96-eb45455412cd"><td class="cell-title"><a href="https://www.notion.so/PATCH-PANEL-1422794dc8e88067ae96eb45455412cd?pvs=21">PATCH PANEL</a></td><td class="cell-|\Qh"><a href="https://cablematic.com/es/productos/patch-panel-19-de-24-rj45-cat6-ftp-05u-lanberg-pps6-0024-b-RD113/" class="url-value">https://cablematic.com/es/productos/patch-panel-19-de-24-rj45-cat6-ftp-05u-lanberg-pps6-0024-b-RD113/</a></td><td class="cell-SOXI">1</td><td class="cell-G&lt;`O">47,15 €</td><td class="cell-r;LK">47,15</td><td class="cell-zB&lt;K">57,0515</td><td class="cell-oBN{"><span style="margin-right:6px"><a href="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/Sin%20ti%CC%81tulo%20a126b80406374ffbaa3e9dfc40a55241/PATCH%20PANEL%201422794dc8e88067ae96eb45455412cd/patchpanel.jpg"><img style="width:20px;max-height:24px" src="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/Sin%20ti%CC%81tulo%20a126b80406374ffbaa3e9dfc40a55241/PATCH%20PANEL%201422794dc8e88067ae96eb45455412cd/patchpanel.jpg" alt="patchpanel.jpg"/></a></span></td><td class="cell-kDB&gt;"></td></tr><tr id="1422794d-c8e8-80b7-bd1c-fa3089e39d5c"><td class="cell-title"><a href="https://www.notion.so/ROSETA-x2-1422794dc8e880b7bd1cfa3089e39d5c?pvs=21">ROSETA x2</a></td><td class="cell-|\Qh"><a href="https://cablematic.com/es/productos/roseta-de-superficie-lanberg-con-2-x-rj45-cat-6-ftp-blindado-RI145/" class="url-value">https://cablematic.com/es/productos/roseta-de-superficie-lanberg-con-2-x-rj45-cat-6-ftp-blindado-RI145/</a></td><td class="cell-SOXI">9</td><td class="cell-G&lt;`O">4,40 €</td><td class="cell-r;LK">39,6</td><td class="cell-zB&lt;K">47,916</td><td class="cell-oBN{"><span style="margin-right:6px"><a href="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/Sin%20ti%CC%81tulo%20a126b80406374ffbaa3e9dfc40a55241/ROSETA%20x2%201422794dc8e880b7bd1cfa3089e39d5c/roseta.jpg"><img style="width:20px;max-height:24px" src="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/Sin%20ti%CC%81tulo%20a126b80406374ffbaa3e9dfc40a55241/ROSETA%20x2%201422794dc8e880b7bd1cfa3089e39d5c/roseta.jpg" alt="roseta.jpg"/></a></span></td><td class="cell-kDB&gt;"></td></tr><tr id="1432794d-c8e8-808b-9353-c05f6c7e62a8"><td class="cell-title"><a href="https://www.notion.so/CANALETA-1432794dc8e8808b9353c05f6c7e62a8?pvs=21">CANALETA</a></td><td class="cell-|\Qh"><a href="https://www.leroymerlin.es/productos/electricidad-y-domotica/canalizar-y-ordenar-los-cables/canaletas/canaleta-10x10-adh-2m-bl-12352312.html" class="url-value">https://www.leroymerlin.es/productos/electricidad-y-domotica/canalizar-y-ordenar-los-cables/canaletas/canaleta-10x10-adh-2m-bl-12352312.html</a></td><td class="cell-SOXI">8</td><td class="cell-G&lt;`O">2,36 €</td><td class="cell-r;LK">18,88</td><td class="cell-zB&lt;K">22,8448</td><td class="cell-oBN{"><span style="margin-right:6px"><a href="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/Sin%20ti%CC%81tulo%20a126b80406374ffbaa3e9dfc40a55241/CANALETA%201432794dc8e8808b9353c05f6c7e62a8/media.webp"><img style="width:20px;max-height:24px" src="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/Sin%20ti%CC%81tulo%20a126b80406374ffbaa3e9dfc40a55241/CANALETA%201432794dc8e8808b9353c05f6c7e62a8/media.webp" alt="media.webp"/></a></span></td><td class="cell-kDB&gt;"></td></tr></tbody></table><br/><br/></div><p id="1432794d-c8e8-800f-9fd5-ffa1024bffcb" class="">
+</p><p id="1432794d-c8e8-803b-97d5-d2753f5a1a71" class="">
+</p><p id="1432794d-c8e8-807d-af01-fffcbbb45b5b" class="">
+</p><h1 id="1432794d-c8e8-807c-9193-f0ce8cedd4d1" class="">DISPOSICIÓN EN EL AULA</h1><p id="1432794d-c8e8-806b-96e5-f50cff9ccfd9" class="">
+</p><figure id="1432794d-c8e8-8016-9af2-f6ce3822269b" class="image"><a href="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/cableadoaulaV6.drawio.png"><img style="width:1710.984375px" src="CABLEADO%20AULA%201422794dc8e880a7ac29c9be2bbd5910/cableadoaulaV6.drawio.png"/></a></figure><p id="1432794d-c8e8-80de-abf0-fab5c89e622a" class="">
+</p><p id="1432794d-c8e8-80a6-9279-c60549faa6ae" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
