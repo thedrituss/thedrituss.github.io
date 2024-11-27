@@ -7,14 +7,19 @@ ul, li {
 }
 
 
-
+body{
+    width: 90%;
+    margin: 0 auto;
+}
 
 #contenedorprincipal{
     display: grid;
     grid-template-areas: 'header header header'
-                         'nav nav nav nav'
+                         'nav nav nav'
                          'main main aside'
                          'footer footer footer';
+
+    
                          
 }
 
