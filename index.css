@@ -5,3 +5,35 @@ h1 {
 ul, li {
     list-style: none;
 }
+
+
+
+
+#contenedorprincipal{
+    display: grid;
+    grid-template-areas: 'header header header'
+                         'nav nav nav nav'
+                         'main main aside'
+                         'footer footer footer';
+                         
+}
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
+}
